@@ -993,6 +993,15 @@ img {
     font-size: var(--font-size-3xl);
   }
 
+  .hero-cta {
+    padding: 0.5rem var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .hero-buttons {
+    gap: var(--spacing-sm);
+  }
+
   /* About */
   .about {
     padding: var(--spacing-xl) var(--spacing-sm);
