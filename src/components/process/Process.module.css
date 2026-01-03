@@ -1,0 +1,118 @@
+.process {
+  padding: var(--spacing-3xl) var(--spacing-md);
+  background: var(--color-background);
+}
+
+.processContainer {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.processCard {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.processCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.processHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.processNumber {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  background: var(--color-accent-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+}
+
+.processTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.processContent {
+  color: var(--color-text-light);
+}
+
+.processDescription {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+.processList {
+  list-style: none;
+  padding: 0;
+}
+
+.processList li {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  padding: var(--spacing-xs) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.processList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.processList li strong {
+  color: var(--color-text);
+}
+
+/* Tablet */
+@media (max-width: 968px) {
+  .processGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .process {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .process {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .processCard {
+    padding: var(--spacing-lg);
+  }
+
+  .processTitle {
+    font-size: var(--font-size-xl);
+  }
+}
